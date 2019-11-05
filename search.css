@@ -1,0 +1,96 @@
+body {
+  background-color: #eee;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body{
+  background: #eee
+}
+
+.topbar{
+  font-family: Consolas, monospace;
+  padding: 10px;
+  font-weight: lighter;
+  background-color: #d1b881;
+  color: black
+}
+
+.topbar .left{
+  font-size: 150%;
+  font-weight: lighter;
+  text-decoration: none;
+  color: black
+
+
+}
+
+.topbar .right{
+  text-decoration: none;
+  float: right;
+  margin-top: 5px;
+  color: black;
+}
+
+.searchbar{
+  position: fixed;
+}
+.searchbar input[type=text] {
+  float: middle;
+  padding: 14px;
+  width: 650px;
+  margin-top: 10px;
+  margin-left: 300px;
+  font-family: Consolas, monospace;
+  font-size: 18px;
+}
+.searchbar button{
+
+  width: 100px;
+  height: 54px;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-size: 17px;
+  border-left: none;
+  cursor: pointer;
+}
+
+.filter {
+  font-family: Consolas, monospace;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 48px;
+  left: 0px;
+  background-color: #ccc;
+
+  padding-top: 40px;
+}
+.dropdown-btn{
+  margin-left: 10px;
+  font-size: 14px;
+}
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+
+.checkbox{
+  margin-left: 10px;
+}
+
+.items{
+  margin-left: 400px;
+  margin-top: 200px;
+  font-size:50px;
+}

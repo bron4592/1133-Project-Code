@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>List New Item</title>
+    <link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="../resources/css/my_style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="color:#d1b881">List New Item</h1>
+    <br>
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label for="title"><h5>Item Name</h5></label>
+            <input class="form-control" id="title" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="name"><h5>Item Price</h5></label>
+            <input class="form-control" id="name" placeholder="">
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h5>Upload Photos</h5>
+                <input type="file" id="myFile" name="filename">
+            </div>
+            <div class="col-sm">
+                <h5>Class</h5>
+                <div class="form-group">
+                    <select class="form-control" id="pages" placeholder="Academics">
+                        <option>CSCI 1300</option>
+                        <option>CSCI 2270</option>
+                        <option>CSCI 2400</option>
+                        <option>CSCI 2824</option>
+                        <option>CSCI 3308</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="text"><h5>Description</h5></label>
+            <textarea class="form-control" id="text" rows="10" placeholder="Text"></textarea>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h5>Select Tags</h5>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="python">
+                    <label class="form-check-label" for="python">Like New</label>
+                    <input type="checkbox" class="pr-3" class="form-check-input" id="c++">
+                    <label class="form-check-label" for="c++">Great</label>
+                    <input type="checkbox" class="pr-3" class="form-check-input" id="java">
+                    <label class="form-check-label" for="java">Good</label>
+                    <input type="checkbox" class="pr-3" class="form-check-input" id="scala">
+                    <label class="form-check-label" for="scala">Fair</label>
+                    <input type="checkbox" class="pr-3" class="form-check-input" id="perl">
+                    <label class="form-check-label" for="perl">Poor</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                    <br>
+                <center><button type="submit" class="btn btn-primary">Submit</button></center>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="../resources/js/my_scripts.js"></script>
+</body>
+</html>

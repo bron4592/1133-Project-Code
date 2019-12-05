@@ -1,60 +1,14 @@
-<!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% extends 'sko/base.html' %}
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<head>
-  <title>New User Registration</title>
-</head>
-<body>
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Sko Swap</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Create a Listing</a>
-      <a class="nav-item nav-link" href="#">Browse Current Items for Sale</a>
-    </div>
-  </div>
-</nav>
-<h1>New User Registration</h1>
-<form class="form-group">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">First Name</label>
-      <input type="text" class="form-control" id="firstName" placeholder="First Name">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Last Name</label>
-      <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-    </div>
-  </div>
- <div class="form-group">
-    <label for="exampleFormControlInput1">Username</label>
-    <input type="text" class="form-control" id="newUsername" placeholder="Username">
-  </div>
-   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="newEmail" placeholder="Must be a valid @colorado.edu email">
-  </div>
-   <div class="form-group">
-    <label for="exampleFormControlInput1">Password</label>
-    <input type="password" class="form-control" id="newPassword" placeholder="Password">
-  </div>
-   <div class="form-group">
-    <label for="exampleFormControlInput1">Confirm Password</label>
-    <input type="password" class="form-control" id="newPassword" placeholder="Confirm Password">
-  </div>
-  <button type="submit" class="btn btn-primary">Create New User</button>
-</form>
-</body>
-</html>
+{% block main %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+  If you already have an account <a href="/login" target="blank"><strong>login</strong></a> instead.
 
-
+{% endblock %}
 
 

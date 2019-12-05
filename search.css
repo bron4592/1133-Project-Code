@@ -94,3 +94,16 @@ body{
   margin-top: 200px;
   font-size:50px;
 }
+
+.info {
+  /*font-family: Consolas, monospace;*/
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 48px;
+  left: 0px;
+  background-color: #ccc;
+
+  padding-top: 40px;
+}

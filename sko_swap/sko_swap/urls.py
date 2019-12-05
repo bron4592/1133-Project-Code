@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from sko import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-	path('', views.register, name='sko-register'),
+	path('', views.register, name='sko/register.html'),
     path('admin/', admin.site.urls),
+    path('login/', auth_views.LoginView.as_view(template_name='sko/login.html'), name='login'),
 ]

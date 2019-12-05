@@ -35,4 +35,18 @@ def home(request):
 		'object_list':queryset
 	} 
 	return render(request, 'sko/home.html', context)
-# Create your views here.
+
+def account(request):
+	queryset = listing.objects.filter(author = request.user)
+	context = {
+		'object_list':queryset
+	}
+	return render(request, 'sko/account.html', context)
+
+def search(request):
+	search_bar = 'book'
+	queryset = listing.objects.filter(Q(desc__icontains=search_bar) | Q(title__icontains=search_bar))
+	context ={
+		'object_list':queryset
+		}
+	return render(request, 'sko/home.html', context)

@@ -1,4 +1,9 @@
 {% extends 'sko/base.html' %}
-{% main block%}
+{% block main %}
 <p> Posts will go here</p>
+{% for obj in object_list%}
+<h1>{{ obj.title}}</h1>
+<p>{{ obj.price }}</p>
+<p>{{ obj.desc }}</p>
+{% endfor %}
 {% endblock%}

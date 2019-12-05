@@ -22,6 +22,5 @@ urlpatterns = [
 	path('', views.register, name='sko/home.html'),
     path('admin/', admin.site.urls),
     path('login/', auth_views.LoginView.as_view(template_name='sko/login.html'), name='login'),
-    path('home/', views.home, name='sko/home.html'),
-    path('createPost/', views.createPost, name='sko/create_post.html')
+    path('home/', views.home, name='sko/home.html')
 ]

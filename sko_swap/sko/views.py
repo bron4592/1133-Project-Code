@@ -17,17 +17,4 @@ def register(request):
 
 def home(request):
 	return render(request, 'sko/home.html')
-
-def createPost(request):
-	if request.method == 'POST':
-		form = newPost(request.POST)
-		if form.is_valid():
-			instance = form.save(commit=False)
-			instance.author = request.user
-			instance.save()
-			messages.success(request, f'New Post Successfully Added!')
-			return redirect('sko/home')
-	else:
-		form = newPost()
-	return render(request, 'sko/create_post.html', {'form':form})
 # Create your views here.

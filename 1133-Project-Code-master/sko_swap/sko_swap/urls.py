@@ -26,4 +26,5 @@ urlpatterns = [
     path('home/', views.home, name='sko/home'),
     path('newPost/', views.createPost, name='sko/newPost'),
     path('account/', views.account, name='sko/account'),
+    path(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]

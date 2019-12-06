@@ -1,7 +1,7 @@
 {% extends 'sko/base.html' %}
-
+{% block title %}Create New Post{% endblock %}
+{% block subtitle %}Create New Post{% endblock %}
 {% block main %}
-  <h2>Create New Post</h2>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

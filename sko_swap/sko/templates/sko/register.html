@@ -1,7 +1,9 @@
 {% extends 'sko/base.html' %}
-
+{% block title %}Sign Up{% endblock %}
+{% block subtitle %}Welcome to Buff Bargains{% endblock %}
 {% block main %}
-  <h2>Sign up</h2>
+<h2>Buff Bargains is an online marketplace for all things Buffs!</h2>
+<h3> Create an account using your @colorado.edu email to get started!</h3>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

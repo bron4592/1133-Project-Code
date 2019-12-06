@@ -19,7 +19,7 @@ from sko import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-	path('', views.home, name='sko/home'),
+	path('', views.register, name='sko/home'),
     path('admin/', admin.site.urls),
     path('login/', auth_views.LoginView.as_view(template_name='sko/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='sko/logout.html'), name='logout'),

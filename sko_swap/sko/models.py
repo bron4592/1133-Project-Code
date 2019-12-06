@@ -18,6 +18,7 @@ class listing(models.Model):
 	price = models.CharField(max_length=100)
 	desc = models.TextField()
 	date = models.DateTimeField(auto_now=True)
+	phone = models.CharField(max_length=12)
 	class Meta:
 		ordering = ['-date']
 	def __str__(self):

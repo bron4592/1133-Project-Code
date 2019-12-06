@@ -2,20 +2,20 @@ from django import forms
 from . import models
 
 cond1 = (
-(0, "Brand New"),
-(1, "Like New"),
-(2, "Very Good"),
-(3, "Good"),
-(4, "Acceptable"),
+("Brand New", "Brand New"),
+("Like New", "Like New"),
+("Very Good", "Very Good"),
+("Good", "Good"),
+("Acceptable", "Acceptable"),
 )
 
 course1 = (
-(0, "CSCI-1300"),
-(1, "CSCI-2270"),
-(2, "CSCI-2400"),
-(3, "CSCI-2824"),
-(4, "CSCI-3002"),
-(5, "CSCI-3308"),
+("CSCI-1300", "CSCI-1300"),
+("CSCI-2270", "CSCI-2270"),
+("CSCI-2400", "CSCI-2400"),
+("CSCI-2824", "CSCI-2824"),
+("CSCI-3002", "CSCI-3002"),
+("CSCI-3308", "CSCI-3308"),
 )
 
 class newUser(forms.ModelForm):

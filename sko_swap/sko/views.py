@@ -14,7 +14,7 @@ def register(request):
 			instance.author = request.user
 			instance.save()
 			messages.success(request, f'Account Successfully Created!')
-			return redirect('sko/home')
+			return redirect('login')
 	else:
 		form = newUser()
 	return render(request, 'sko/register.html', {'form':form})

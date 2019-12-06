@@ -22,7 +22,10 @@
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Buff Bargains</a>
       {% if user.is_authenticated %}
-      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <form method = "GET" action=''>
+        <input type="text" name="q" placeholder="Search Listings"></input>
+        <button type="submit">Search</button>
+      </form>
       <ul class="navbar-nav flex-row px-4">
         <li class="nav-item text-nowrap px-1">
           <a class="nav-link" href="{% url 'admin:index' %}">Welcome, {{ user.username }}   |</a>

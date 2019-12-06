@@ -19,11 +19,15 @@ class listing(models.Model):
 	desc = models.TextField()
 	date = models.DateTimeField(auto_now=True)
 	phone = models.CharField(max_length=12)
+	photo = models.ImageField(upload_to='images/', blank=True)
+	course = models.CharField(max_length=100)
+	cond = models.CharField(max_length=100)
 	class Meta:
 		ordering = ['-date']
 	def __str__(self):
 		return self.title
-		
-
-
+	def get_delete_url(self):
+		return reverse('post-delete', kwargs={
+            'pk': self.pk
+        })
 	

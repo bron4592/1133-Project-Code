@@ -8,8 +8,8 @@
   <p><b>Price:</b> ${{ obj.price }}</p>
   <p><b>Description:</b> {{ obj.desc }}</p>
   <p><b>Author:</b> {{ obj.author }}</p>
-  <p><b>Date Posted:</b> {{obj.date}}</p>
-  <a href="#">Delete Post</a>
+  <p><b>Date Posted:</b> {{obj.date}}</p>  
+<a href="{% url 'post-delete' id=obj.pk %}">Delete Post</a>
 </div>
 {% endfor %}
 {% endblock%}

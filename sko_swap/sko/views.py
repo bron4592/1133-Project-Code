@@ -3,6 +3,8 @@ from . forms import newUser, newPost
 from . models import listing
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.db.models import Q
+from django.shortcuts import get_object_or_404
 
 def register(request):
 	if request.method == 'POST':
@@ -19,7 +21,7 @@ def register(request):
 
 def createPost(request):
 	if request.method == 'POST':
-		form = newPost(request.POST)
+		form = newPost(request.POST, request.FILES)
 		if form.is_valid():
 			instance = form.save(commit=False)
 			instance.author = request.user
@@ -30,7 +32,11 @@ def createPost(request):
 		form = newPost()
 	return render(request, 'sko/newPost.html', {'form':form})
 def home(request):
-	queryset = listing.objects.all()
+	query = request.GET.get("q")
+	if query:
+		queryset = listing.objects.filter(Q(title__icontains=query) | Q(desc__icontains=query))
+	else:
+		queryset = listing.objects.all()
 	context ={
 		'object_list':queryset
 	} 
@@ -43,10 +49,12 @@ def account(request):
 	}
 	return render(request, 'sko/account.html', context)
 
-def search(request):
-	search_bar = 'book'
-	queryset = listing.objects.filter(Q(desc__icontains=search_bar) | Q(title__icontains=search_bar))
-	context ={
+def post_delete(request, id):
+	listingToDelete = get_object_or_404(listing, id=id)
+	listingToDelete.delete()
+	queryset = listing.objects.filter(author = request.user)
+	context = {
 		'object_list':queryset
-		}
-	return render(request, 'sko/home.html', context)
+	}
+	return render(request, 'sko/account.html', context)
+

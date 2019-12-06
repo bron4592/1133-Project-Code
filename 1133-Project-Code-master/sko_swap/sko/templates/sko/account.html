@@ -1,0 +1,15 @@
+{% extends 'sko/base.html' %}
+{% block title %}Your Listings{% endblock %}
+{% block subtitle %}Your Listings{% endblock %}
+{% block main %}
+{% for obj in object_list%}
+<div class="jumbotron">
+  <h1>{{ obj.title}}</h1>
+  <p><b>Price:</b> ${{ obj.price }}</p>
+  <p><b>Description:</b> {{ obj.desc }}</p>
+  <p><b>Author:</b> {{ obj.author }}</p>
+  <p><b>Date Posted:</b> {{obj.date}}</p>
+  <a href="#">Delete Post</a>
+</div>
+{% endfor %}
+{% endblock%}

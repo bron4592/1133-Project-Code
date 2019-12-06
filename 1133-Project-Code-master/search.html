@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <div class="topbar">
+      <a class="left" href="search.html">Buff Bargains</a>
+      <a class="right" href="account.html">Account</a>
+    </div>
+    <div class="searchbar">
+      <input type="text" placeholder="Search..">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="filter">
+      <button class="dropdown-btn">course number
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <input type="checkbox" name="course1"> CSCI 1300<br>
+        <input type="checkbox" name="course2"> CSCI 2400<br>
+        <input type="checkbox" name="course3"> CSCI 3308<br>
+      </div>
+      <br>
+      <button class="dropdown-btn">condition
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <input type="checkbox" name="condition1"> new<br>
+        <input type="checkbox" name="condition2"> good<br>
+        <input type="checkbox" name="condition3"> fair<br>
+      </div>
+      <br>
+      <button class="dropdown-btn">more dropdowns
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <br>
+      <div class="checkbox">
+        <input type="checkbox" value=0> has image<br>
+        <input type="checkbox" value=0> [more checkboxes]<br>
+      </div>
+    </div>
+    <div class="items">
+      <p>items to be displayed here.</p>
+    </div>
+    <script>
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+  </body>
+</html>
